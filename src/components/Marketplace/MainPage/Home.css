@@ -1,0 +1,195 @@
+.homeSlide h1 {
+  font-size: 45px;
+  line-height: 55px;
+  margin: 50px 0 20px 0;
+}
+.homeSlide p {
+  margin: 20px 0;
+}
+.homeSlide ul {
+  position: absolute;
+  bottom: 20px;
+}
+.homeSlide ul li {
+  border: 2px solid #b8b7b7;
+  border-radius: 50%;
+  padding: 10px;
+}
+.homeSlide ul li button {
+  background: transparent !important;
+  color: transparent !important;
+}
+.homeSlide ul li button::before {
+  font-size: 15px !important;
+  color: #7C4A15;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  margin: auto;
+}
+/*********/
+/*------head-----------*/
+/*------search-----------*/
+.search {
+  padding: 20px 0;
+}
+.search .logo img {
+  width: auto;
+  height: auto;
+}
+.search .width {
+  width: 20%;
+}
+.search-box {
+  width: 65%;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  /*padding: 10px;*/
+  border-radius: 50px;
+}
+.search-box i {
+  width: 5%;
+  text-align: center;
+  font-size: 20px;
+  opacity: 0.5;
+  padding: 15px 20px;
+  font-size: 17px;
+}
+.search-box input {
+  width: 100%;
+  padding: 10px;
+}
+::placeholder {
+  font-size: 15px;
+}
+.search-box span {
+  width: 30%;
+  opacity: 0.5;
+  border-left: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+.cart {
+  position: relative;
+}
+.search .cart span {
+  position: absolute;
+  top: -10px;
+  right: 0px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #7C4A15;
+  font-size: 12px;
+  color: #fff;
+}
+.search .f_flex {
+  justify-content: end;
+}
+/*------search-----------*/
+.catgrories {
+  background-color: #f6f9fc;
+  padding: 0px 30px;
+  border-radius: 5px;
+  height: 6vh;
+  margin-top: 5px;
+}
+.catgrories span {
+  margin-right: 20px;
+  font-size: 30px;
+  margin-top: 10px;
+}
+.catgrories h4 {
+  font-weight: 500;
+  margin-top: 12px;
+}
+.catgrories h4 i {
+  margin-left: 10px;
+}
+.open {
+  display: none;
+}
+.search.active {
+  height: 12vh;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: -1px 11px 24px -11px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+
+/*****formulaire***/
+.add-instrument-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+}
+
+.add-instrument-form h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.add-instrument-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+}
+
+.form-group textarea {
+  height: 8rem;
+}
+
+button[type="submit"] {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #555;
+}
+
+

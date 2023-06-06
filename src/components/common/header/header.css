@@ -1,0 +1,164 @@
+/*--------head------------*/
+.head {
+  padding: 10px 0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo  img{
+  width: 110px;
+  height: auto;
+}
+.head .icon {
+  margin-left: 10px;
+}
+ .icon-header {
+  width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #7C4A15;
+    transition: 0.5s;
+    position: relative; /* position relative par défaut */
+    left: 30px;/* déplacement vers le haut */
+    top: 20px;/* déplacement vers la droite */
+}
+.icon-header:hover{
+  color: #fff;
+  background-color: #7C4A15;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+
+/* CSS */
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: px solid #7C4A15;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #7C4A15;
+  cursor: pointer;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 20.5px;
+  margin-right: 30px;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 90%;
+  will-change: transform;
+  height: 40px;
+  position: relative; /* position relative par défaut */
+
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #7C4A15;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+/*--------head------------*/
+/*--------header------------*/
+
+header {
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 10px 10px;
+  width: 100%;
+
+  color: #fff;
+}
+header .nav {
+  display: flex ;
+}
+header li {
+  margin-right: 40px;
+}
+header ul {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: 90px;
+}
+header ul li a {
+  color: #fff;
+  font-weight: 500;
+  margin-left: 20px;
+}
+header ul li a:hover {
+  color: #7C4A15;
+}
+
+.toggle {
+  display: none;
+}
+
+
+
+/*--------header------------*/
+@media screen and (max-width: 768px) {
+ 
+  header {
+    margin: 0;
+    background-color: #7C4A15;
+    margin-top: 10px;
+    
+  }
+  header ul.flexSB {
+    display: none;
+  }
+  
+  .toggle {
+    display: block;
+    background: none;
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    right: 0;
+    top: -20px;
+  }
+  .mobile-nav {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    background-color: #7C4A15;
+  
+  }
+   a.button-28 {
+    color: white;
+    margin-right: 70px;
+    margin-top: 10px;
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+  }
+
+}

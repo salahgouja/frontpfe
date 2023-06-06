@@ -1,0 +1,30 @@
+.backdetails {
+    background-image: url("../../../../public/images/bgdetails.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    padding-top: 30%;
+    padding-right: 50px;
+    color: #fff;
+    text-align: center;
+  }
+  .backdetails2 {
+    background-image: url("../../../../public/images/bgdetails.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    padding-top: 250%;
+    padding-right: 50px;
+    color: #fff;
+    text-align: center;
+  }

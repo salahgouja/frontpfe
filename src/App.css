@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f8f8f8;
+}
+/*------------global-----------*/
+.container {
+  max-width: 85%;
+  margin: auto;
+}
+.flexSB {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #7C4A15;
+  transition: 0.5s;
+  
+}
+.icon:hover {
+  cursor: pointer;
+  background-color: #7C4A15;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+.row {
+  width: 50%;
+}
+button {
+  padding: 17px 10px;
+  background-color: #fff;
+  color: #7C4A15;
+  font-weight: 600;
+  border: none;
+  margin: 30px 10px 0 0;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0 24px 36px -11px rgb(0 0 0 / 9%);
+  transition: 0.5s;
+}
+
+button:hover {
+  box-shadow: none;
+}
+button3 {
+  font-weight: 600;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.5s;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+button3:hover {
+  box-shadow: none;
+}
+.primary-btn {
+  background-color: #7C4A15;
+  color: #fff;
+}
+.primary-btn.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+
+/*------------global-----------*/
+#heading {
+  text-align: center;
+  padding: 40px 0;
+}
+#heading h3 {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #7C4A15;
+  text-transform: uppercase;
+}
+#heading h1 {
+  font-size: 45px;
+  margin: 20px 0;
+  text-transform: capitalize;
+}
+p {
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.back {
+  background-image: url("../public/images/photo.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  padding-top: 30%;
+  padding-right: 50px;
+  color: #fff;
+  text-align: center;
+}
+.back h1 {
+  font-size: 100px;
+  font-weight: 400;
+}
+.back h2 {
+  font-weight: 500;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+.margin {
+  margin-top: 40.3%;
+}
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+.flex {
+  display: flex;
+}
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+.outline-btn {
+  margin: 0;
+  box-shadow: none;
+  border: 2px solid #7C4A15;
+  width: 100%;
+  transition: 0.5s;
+}
+.outline-btn:hover {
+  background-color: #7C4A15;
+  color: #fff;
+}
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+.padding {
+  padding: 80px 0;
+}
+.shadow {
+  box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
+  background-color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+}
+.background {
+  background: #f6f9fc;
+  padding: 50px 0;
+}
+
+.d_flex {
+  display: flex;
+  justify-content: space-between;
+}
+.c_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.f_flex {
+  display: flex;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+li {
+  list-style: none;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.RText {
+  text-align-last: right;
+}
+input,
+button {
+  border: none;
+  outline: none;
+  background-color: none;
+}
+.row {
+  width: 50%;
+}
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  background: #f3f5f9;
+  margin-left: 20px;
+  text-align: center;
+  border-radius: 50%;
+}
+.boxShadow {
+  box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
+}
+/**************/
+/*---------category----------*/
+.c_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contentWidth {
+  width: 77%;
+}
+.category {
+  box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
+  background-color: #fff;
+  width: 23%;
+  height: 510px;
+  padding: 15px 0;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.category img {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  object-fit: contain;
+}
+.category span {
+  margin: 10px 20px;
+  text-transform: capitalize;
+}
+.category .box {
+  transition: 0.5s;
+  padding: 0 20px;
+}
+.category .box:hover {
+  background-color: #f8e6d2;
+  cursor: pointer;
+}
+
+/*---------category----------*/
+.btn-primary {
+  background: #7C4A15; /* btn visite collection */
+  padding: 13px 40px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 5px;
+}
+.top {
+  margin-top: 80px;
+}
+.mtop {
+  margin-top: 40px;
+}
+/*---------product-----------*/
+/*----- control btn -------*/
+.control-btn .next,
+.control-btn .prev {
+  position: absolute;
+  top: 40%;
+  width: 50px;
+  height: 50px;
+  line-height: 60px;
+  background: #7C4A15;
+  border-radius: 50%;
+  transform: 0.5s;
+  z-index: 5;
+}
+.control-btn .prev {
+  left: -20px;
+}
+.control-btn .next {
+  right: -20px;
+}
+.control-btn .prev i,
+.control-btn .next i {
+  font-size: 20px;
+  transition: 0.5s;
+  color: #fff;
+}
+.control-btn .prev:hover,
+.control-btn .next:hover {
+  background: #7C4A15;
+  color: white;
+  cursor: pointer;
+}
+
+
+/*---------product-----------*/
+/*----- control btn -------*/
+.control-btn .next,
+.control-btn .prev {
+  position: absolute;
+  top: 40%;
+  width: 50px;
+  height: 50px;
+  line-height: 60px;
+  background: #7C4A15;
+  border-radius: 50%;
+  transform: 0.5s;
+  z-index: 5;
+}
+.control-btn .prev {
+  left: -20px;
+}
+.control-btn .next {
+  right: -20px;
+}
+.control-btn .prev i,
+.control-btn .next i {
+  font-size: 20px;
+  transition: 0.5s;
+  color: #fff;
+}
+.control-btn .prev:hover,
+.control-btn .next:hover {
+  background: #7C4A15;
+  color: white;
+  cursor: pointer;
+}
+
+/*********/
+.app.dark {
+  background-color: #111;
+  color: rgb(156, 156, 156);
+
+}
+
+/***********/
+
+
+@media screen and (max-width: 768px) {
+  .grid2,
+  .grid3,
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .back {
+    background-position: center;
+    padding-top: 50%;
+    height: 80vh;
+  }
+  
+}

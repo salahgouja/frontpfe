@@ -1,0 +1,270 @@
+/*************/
+.coursesCard {
+  padding: 50px 0;
+}
+.coursesCard .items {
+  background-color: #fff;
+  padding: 17px;
+  text-align: center;
+
+}
+.coursesCard .img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #7C4A15;
+  padding: 15px;
+}
+.coursesCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.coursesCard .text {
+  margin-left: 15px;
+  text-align: left;
+}
+.coursesCard .text h1 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 45px;
+}
+.coursesCard .rate {
+  margin: 20px 0;
+  color: #7C4A15;
+}
+.coursesCard .rate i {
+  font-size: 13px;
+  margin-right: 5px;
+}
+.coursesCard .details .dimg img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.coursesCard .details .box .prof {
+  display: flex;
+  align-items: center;
+  color: grey;
+  text-decoration: none;
+}
+.coursesCard .details span {
+  color: #7C4A15;
+  font-weight: bold;
+  font-size: 15px;
+  display: block; 
+  margin-top: 15px; 
+}
+
+.coursesCard .details span2 {
+  color: #7C4A15;
+  font-weight: 500;
+  font-size: 14px;
+  display: block; 
+  margin-top: 6px; 
+  text-align: center;
+}
+.coursesCard .price {
+  margin: 30px 0;
+  background-color: #f8f8f8;
+  padding: 10px;
+}
+.coursesCard h3 {
+  font-weight: 500;
+  color: #7C4A15;
+}
+/*-------------online---------*/
+.online {
+  text-align: center;
+}
+.online .box {
+  box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
+  background-color: #fff;
+  padding: 30px 20px;
+  transition: 0.5s;
+}
+.online .img {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  position: relative;
+}
+.online img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.online h1 {
+  font-weight: 600;
+  font-size: 20px;
+  margin: 20px 0;
+  line-height: 30px;
+  
+}
+.online h2 {
+  font-weight: 500;
+  font-size: 20px;
+  margin: 20px 0;
+  line-height: 30px;
+  color: #7C4A15;
+
+}
+.online span {
+  background-color: #f8f8f8;
+  padding: 5px 20px;
+  font-weight: 500;
+  font-size: 15px;
+  color: #7C4A15;
+  border-radius: 5px;
+  line-height: 6; /* Ajustez la valeur selon vos besoins */
+}
+.online .container .box .para {
+  display: flex;
+  align-items: center;
+  color: grey;
+  text-decoration: none;
+}
+.online .box .show {
+  opacity: 0;
+}
+.online .box:hover {
+  background-color: #7C4A15;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.online .box:hover .show {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.online .box:hover h1 {
+  color: #fff;
+}
+.online .box:hover h2 {
+  color: #fff;
+}
+/********** bouton + ********/
+.container {
+  position: relative;
+}
+
+
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    width: max-content;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1;
+    margin-left: -120px;
+    padding: 10px;
+  }
+  
+
+
+.dropdown ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown li {
+  margin-bottom: 10px;
+}
+
+.dropdown a {
+  color: #0a0a0a;
+  font-size: 16px;
+  text-decoration: none;
+  
+}
+/*********Ajout button****/
+.Ajoutcours{
+  appearance: none;
+    background-color: transparent;
+    border: px solid #7C4A15;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #7C4A15;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 20.5px;
+    margin-right: 30px;
+    margin-left: 50px;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 25%;
+    will-change: transform;
+    height: 40px;
+}
+
+.Ajoutcours:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.Ajoutcours:disabled {
+  pointer-events: none;
+}
+
+.Ajoutcours:hover {
+  color: #fff;
+  background-color: #7C4A15;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+/* courses.css */
+.reunion-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.reunion-details-content {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reunion-details-content h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.reunion-details-content p {
+  margin-bottom: 8px;
+}
+
+.reunion-details-content a {
+  display: inline-block;
+  margin-top: 20px;
+  color: #337ab7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.reunion-details-content a:hover {
+  color: #23527c;
+}
+
+/*-------------online---------*/
+@media screen and (max-width: 768px) {
+}
