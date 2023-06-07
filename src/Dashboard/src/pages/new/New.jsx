@@ -46,14 +46,17 @@ const New = ({ title }) => {
     e.preventDefault();
     try {
       const formData = new FormData();
-      formData.append('nom', nom);
+      formData.append('name', nom);
       formData.append('email', email);
       formData.append('role', role);
-      formData.append('numTelephone', telephone);
-      formData.append('motDePasse', mdp);
-      formData.append('confirmerMotDePasse', cmdp);
+      formData.append('phoneNumber', telephone);
+      formData.append('password', mdp);
+      formData.append('passwordConfirm', cmdp);
       formData.append('image', image);
       const token = localStorage.getItem("token");
+      for (let [key, value] of formData.entries()) { 
+        console.log(key, value);
+      }
 
       const res = await axios.post("http://localhost:8000/api/v1/user", formData, {
         headers: {

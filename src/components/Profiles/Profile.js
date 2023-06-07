@@ -13,6 +13,8 @@ const Profile = () => {
   const [userEmail, setUserEmail] = useState("");
   const [userPhone, setUserPhone] = useState("");
   const [userImage, setUserImage] = useState("");
+  const [mainImage, setmainImage] = useState("");
+
   const [id, setUserId] = useState("");
 
   useEffect(() => {
@@ -37,6 +39,8 @@ const Profile = () => {
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
     const reader = new FileReader();
+    setmainImage(file);
+
     reader.onload = () => {
       const base64Image = reader.result;
       setUserImage(base64Image);
@@ -51,8 +55,7 @@ const Profile = () => {
     formData.append("name", userName);
     formData.append("email", userEmail);
     formData.append("phoneNumber", userPhone);
-    formData.append("image", userImage);
-
+    formData.append("image", mainImage);
     try {
       const token = localStorage.getItem("token");
 
@@ -68,6 +71,15 @@ const Profile = () => {
           }
         );
         if (res.status === 200) {
+          localStorage.setItem("UserName", res.data.data.name);
+
+          localStorage.setItem("UserImage", res.data.data.image);
+          localStorage.setItem("UserEmail", res.data.data.UserEmail);
+
+          localStorage.setItem("UserPhone", res.data.data.UserEmail);
+
+          const userEmail = localStorage.getItem("UserEmail");
+          const userPhone = localStorage.getItem("UserPhone");
           console.log("Modifications enregistrées avec succès !");
         }
       } else if (token && userRole === "teacher") {
@@ -82,11 +94,17 @@ const Profile = () => {
           }
         );
         if (res.status === 200) {
+          localStorage.setItem("UserName", res.data.data.name);
+
+          localStorage.setItem("UserImage", res.data.data.image);
           console.log("Modifications enregistrées avec succès !");
         }
       }
     } catch (error) {
-      console.error("Erreur lors de l'enregistrement des modifications :", error);
+      console.error(
+        "Erreur lors de l'enregistrement des modifications :",
+        error
+      );
     }
   };
 

@@ -9,9 +9,8 @@ const NewTeacher = ({ title }) => {
   const [image, setImage] = useState(null);
   const [nom, setNom] = useState("");
   const [email, setEmail] = useState("");
-  const [telephone, setTelephone] = useState("");
-  const [mdp, setMdp] = useState("");
-  const [Cmdp, setCmdp] = useState("");
+  const [phoneNumber, setphoneNumber] = useState("");
+  const [password, setpassword] = useState("");
   const [role, setRole] = useState("");
   const [conservatoire, setConservatoire] = useState(null);
   const [conservatoires, setConservatoires] = useState([]);
@@ -25,20 +24,17 @@ const NewTeacher = ({ title }) => {
   };
 
   const handleChangeMotDePasse = (e) => {
-    setMdp(e.target.value);
+    setpassword(e.target.value);
   };
 
   const handleChangeTelephone = (e) => {
-    setTelephone(e.target.value);
+    setphoneNumber(e.target.value);
   };
 
   const handleChangeRole = (e) => {
     setRole(e.target.value);
   };
 
-  const handleChangeConfirmationMotDePasse = (e) => {
-    setCmdp(e.target.value);
-  };
 
   const handleChangeConservatoire = (e) => {
     setConservatoire(e.target.value);
@@ -68,15 +64,15 @@ const NewTeacher = ({ title }) => {
       formData.append("name", nom);
       formData.append("email", email);
       formData.append("role", role);
-      formData.append("phoneNumber", telephone);
-      formData.append("password", mdp);
+      formData.append("phoneNumber", phoneNumber);
+      formData.append("password", password);
+      formData.append("passwordConfirm", password);
       formData.append("image", image);
       formData.append("conservatoire", conservatoire);
-      console.log(conservatoire)
       const token = localStorage.getItem("token");
       const res = await axios.post("http://localhost:8000/api/v1/teacher", formData, {
         headers: {
-          "Content-Type": "multipart/form-data",
+          'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`,
         },
       });
@@ -157,7 +153,7 @@ const NewTeacher = ({ title }) => {
                   id="password"
                   name="password"
                   placeholder="Entrez le mot de passe"
-                  value={mdp}
+                  value={password}
                   onChange={handleChangeMotDePasse}
                 />
               </div>
@@ -169,7 +165,7 @@ const NewTeacher = ({ title }) => {
                   id="phone"
                   name="phone"
                   placeholder="Entrez le téléphone"
-                  value={telephone}
+                  value={phoneNumber}
                   onChange={handleChangeTelephone}
                 />
               </div>

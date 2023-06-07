@@ -31,13 +31,14 @@ const Home2 = ({ CartItem , addToCart }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userRole, setUserRole] = useState("");
   const [searchValue, setSearchValue] = useState("");
-
+const [Sent, setSent] = useState(false)
   const handleSearchChange = (event) => {
     setSearchValue(event.target.value);
   };
 
   useEffect(() => {
-    if (params) {
+    if (params ) {
+      setSent(true)
       const [phoneNumbers, paymentId] = params.split("?payment_id=")
     const phoneNumbersList = JSON.parse(phoneNumbers);
 
@@ -52,6 +53,7 @@ const Home2 = ({ CartItem , addToCart }) => {
                 .then((res) => {
                   const { result } = res.data;
                   console.log("result", result);
+                  if (!Sent)
                   alert("success");
                 })
                 .catch((err) => console.log("error", err));

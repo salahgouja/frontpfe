@@ -7,11 +7,11 @@ import axios from "axios";
 const NewConservatoire = ({ title }) => {
   const [nom, setNom] = useState("");
   const [email, setEmail] = useState("");
-  const [telephone, setTelephone] = useState("");
-  const [mdp, setMdp] = useState("");
-  const [cmdp, setCmdp] = useState("");
+  const [phoneNumber, setTelephone] = useState("");
+  const [password, setMdp] = useState("");
+  const [passwordConfirm, setCmdp] = useState("");
   const [role, setRole] = useState("");
-  const [adresseConservatoire, setAdresseConservatoire] = useState("");
+  const [adressconservatoire, setAdresseConservatoire] = useState("");
 
   const handleChangeNom = (e) => {
     setNom(e.target.value);
@@ -44,20 +44,19 @@ const NewConservatoire = ({ title }) => {
   const ajouterConservatoire = async (e) => {
     e.preventDefault();
     try {
-      const formData = new FormData();
-      formData.append("name", nom);
-      formData.append("email", email);
-      formData.append("role", role);
-      formData.append("phoneNumber", telephone);
-      formData.append("password", mdp);
-      formData.append("passwordConfirm", cmdp);
-      formData.append("adressconservatoire", adresseConservatoire);
-
       const token = localStorage.getItem("token");
 
-      const res = await axios.post("http://localhost:8000/api/v1/conservatoire", formData, {
+      const res = await axios.post("http://localhost:8000/api/v1/conservatoire", {
+        "name": nom,
+        "email": email,
+        "role": role,
+        "phoneNumber": phoneNumber,
+        "password": password,
+        "passwordConfirm": passwordConfirm,
+        "adressconservatoire": adressconservatoire
+      }, {
         headers: {
-          'Content-Type': 'multipart/form-data',
+          'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`
         },
       });
@@ -116,7 +115,7 @@ const NewConservatoire = ({ title }) => {
                   id="password"
                   name="password"
                   placeholder="Entrez le mot de passe"
-                  value={mdp}
+                  value={password}
                   onChange={handleChangePassword}
                 />
               </div>
@@ -128,7 +127,7 @@ const NewConservatoire = ({ title }) => {
                   id="phone"
                   name="phone"
                   placeholder="Entrez le téléphone"
-                  value={telephone}
+                  value={phoneNumber}
                   onChange={handleChangeTelephone}
                 />
               </div>
@@ -140,7 +139,7 @@ const NewConservatoire = ({ title }) => {
                   id="Cpassword"
                   name="Cpassword"
                   placeholder="Confirmez le mot de passe"
-                  value={cmdp}
+                  value={passwordConfirm}
                   onChange={handleChangeConfirmPassword}
                 />
               </div>
@@ -162,7 +161,7 @@ const NewConservatoire = ({ title }) => {
                 <input
                   id="conservatoire"
                   name="conservatoire"
-                  value={adresseConservatoire}
+                  value={adressconservatoire}
                   onChange={handleChangeAdresseConservatoire}
                 />
               </div>
